@@ -285,6 +285,8 @@ There are 3 roles, which hold different permissions:
 
 ## Testing API (only with provided JWT tokens)
 
+**APP is delopyed at** https://charliecastagency.herokuapp.com/
+
 With the provided tokens in `tokens.py`, you may test using Postman by inserting the tokens into Authorization tab and manually testing out the various API using the sample requests documented above, or any valid requests.
 
 Also, the auth0 information can be found in `auth.py`.
