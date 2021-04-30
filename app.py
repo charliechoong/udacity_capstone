@@ -16,6 +16,7 @@ def create_app(test_config=None):
   db_drop_and_create_all()
 
   CORS(app)
+
   
   @app.after_request
   def after_request(response):
