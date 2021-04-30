@@ -5,7 +5,10 @@ import json
 import os 
 
 database_name = os.environ.get('DATABASE_NAME', 'cast')
-database_path = os.environ.get('DATABASE_URL', "postgresql://{}@{}/{}".format('postgres', 'localhost:5432', database_name))
+database_path = os.environ.get('DATABASE_URL', "postgres://{}@{}/{}".format('postgres', 'localhost:5432', database_name))
+if not database_path.startswith('postgresql'):
+  database_path = database_path.replace("://", "ql://", 1)
+
 
 db = SQLAlchemy()
 
